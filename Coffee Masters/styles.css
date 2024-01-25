@@ -1,66 +1,143 @@
-.header-bar {
-  margin: 0px;
-  padding: 1rem;
-  position: relative;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1f1f1f;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.page {
+  display: grid;
+  row-gap: 3px;
+  column-gap: 3px;
   width: 100%;
-  background-color: rgb(61,37,24);
-  height: 5rem;
+  padding: 3px;
+  margin: 0 auto;
+  grid-template-areas:
+    "order order"
+    "payment total";
+  grid-template-columns: 1fr 1fr;;
 }
 
-.logo-wrapper img {
-  height: 2rem;
-}
-
-.logo-wrapper {
+.main-nav {
+  background-color: #000000;;
+  color: #9e78e5;
+  font-size: 25px;
   display: flex;
-  width: 15%;
-  margin: auto;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
 }
 
-.header-text {
-  font-size: 1rem;
-  text-align: center;
-  margin: auto;
-  color: rgb(245,238,196);
-}
-
-.column-card {
-  background-color: rgb(235,225,214);
-}
-
-.column-wrapper {
-  display: flex;
-}
-
-.left-column {
-  width: 50%;
-  margin: 3rem;
-  padding: 5px;
-  margin: 10px;
-}
-
-.right-column {
-  width: 50%;
-  margin: 3rem;
-  padding: 5px;
-  margin: 10px;
-}
-
-
-.name-input-group {
+.logo {
+  height: 50px;
   position: relative;
-  display: inline-block;
+  top: 15px;
 }
 
-.name-input {
-  border-color: crimson;
-  padding: 8px;
+.box {
+  background-color: #000000;
   border-radius: 5px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+  padding: 5px;
+  margin-bottom: 5px;
+  width: 100%;
 }
 
-.input-label {
-  background-color: white;
-  color: crimson;
+.box-title {
+  color: #9e78e5;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.order {
+  grid-area: order;
+}
+
+.payment {
+  grid-area: payment;
+}
+
+.total {
+  grid-area: total;
+}
+
+.items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  border-bottom: 2px solid #18111c;
+  display: grid;
+  color: #9e78e5;
+  padding: 10px 0;
+  
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-areas: 
+    "quantity title   price"
+    "quantity options price";
+
+  row-gap: 8px;
+
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item-quantity {
+  grid-area: quantity;
+}
+
+.item-title {
+  grid-area: title;
+  font-weight: bold;
+  padding-left: 15px;
+  color: #9e78e5;
+}
+
+.item-price {
+  grid-area: price;
+  font-weight: bold;
+}
+
+.item-options-list {
+  grid-area: options;
+  color: #9e78e5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.item-option {
+  margin-bottom: 5px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.user-input {
+  background-color: #1f1f1f;
+  border: 2px #885a2d solid;
+  padding: 8px;
+  border-radius: 100px;
+  width: 100%;
+  text-indent: 18px;
+  font-size: 18px;
+  color: #9e78e5;
+}
+
+.user-input-label {
+  color: #885a2d;
+  background-color: #eee1d5;
   font-size: 11px;
   position: absolute;
   left: 25px;
@@ -68,45 +145,64 @@
   padding: 0 2px;
 }
 
-.item {
+.user-input-label-2 {
+  color: #885a2d;
+  background-color: #eee1d5;
+  font-size: 11px;
+  position: absolute;
+  left: 225px;
+  top: -7px;
+  padding: 0 2px;
+}
+
+.short-input {
+  max-width: 200px;
+}
+
+.total {
   display: flex;
-  color: rgb(125,85,46);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e2135;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
 }
 
-.item-name-wrapper {
-  width: 70%;
-  margin-left: 1rem;
+.totals-table {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+  color: #9e78e5
 }
 
-.item-name {
-  font-weight: bold;
+.totals-table td {
+  padding: 10px;
 }
 
-.item-modifier {
-  font-size: 10px;
-}
-
-.item-qty {
-  margin-left: 1rem;
-}
-
-.item-card {
-  height: 50px;
-}
-
-.item-price {
+.totals-table td:last-child {
   text-align: right;
 }
 
-.column-card h2 {
-  text-transform: uppercase;
-  color: rgb(61,37,24);
-  padding: 1rem;
-  font-size: 10px;
+.final-totals {
+  font-weight: bold;
 }
 
-body {
-  margin: 0px;
-  background-color: rgb(239,240,239);
-  font-family: "Open Sans", sans-serif;
+.totalbutton {
+  background-color: #9e78e5;
+  border: none;
+  padding: 10px 30px;
+  width: 100%;
+  border-radius: 100px;
+  font-size: 16px;
+
+}
+
+.checkout {
+  background-color: #9e78e5;
+  border: none;
+  padding: 10px 30px;
+  width: 100%;
+  border-radius: 100px;
+  font-size: 16px;
 }

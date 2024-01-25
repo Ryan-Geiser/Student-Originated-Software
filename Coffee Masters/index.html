@@ -1,125 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-        rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css"
-    />
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Masters</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-<div class="header-bar">
-    <div class="logo-wrapper">
-        <img src="coffee_masters_logo.png"/>
-        <h1 class="header-text">
+    <nav class="main-nav">
+        <h1 class="brand">
+            <img src="https://btholt.github.io/complete-intro-to-web-dev-v3/images/coffee_masters_logo.png"
+                alt="coffee masters logo" class="logo" />
             Coffee Masters
-        </h1>    
-    </div>
-</div>
-
-<div class="column-wrapper">
-
-    <div class="column-card left-column">
-        <h2>Items</h2>
-        <div class="item">
-            <div class="item-qty">
-                1x
+        </h1>
+    </nav>
+    <div class="page">
+        <section class="order box">
+            <h2 class="box-title">CART</h2>
+            <ul class="items">
+                <li class="item">
+                    <div class="item-quantity">
+                        <input id="qant1" type="number" min="0" max="100" value="3">
+                    </div>
+                    <div class="item-title">Cappuccino</div>
+                    <div id="pri1" class="item-price">$4.95</div>
+                    <ul class="item-options-list">
+                        <li class="item-option">Almond Milk</li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <div class="item-quantity">
+                        <input id="qant2" type="number" min="0" max="100" value="1">
+                    </div>
+                    <div class="item-title">Latte</div>
+                    <div id="pri2" class="item-price">$4.85</div>
+                    <ul class="item-options-list">
+                        <li class="item-option">Oat Milk</li>
+                        <li class="item-option"> Double Shot Espresso </li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <div class="item-quantity">
+                        <input id="qant3" type="number" min="0" max="100" value="3">
+                    </div>
+                    <div class="item-title">Cafe Americano</div>
+                    <div id="pri3" class="item-price">$3.25</div>
+                    <ul class="item-options-list">
+                        <li class="item-option"> Double Shot Espresso </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="payment">
+            <div class="name-box box">
+                <h2 class="box-title">NAME</h2>
+                <div class="input-group">
+                    <label class="user-input-label" for="name">Your Name</label>
+                    <input type="text" class="user-input" id="name" />
             </div>
-            <div class="item-name-wrapper">
-                <div class="item-name">
-                    Cappuccino
+            <div class="cc-box box">
+                <h2 class="box-title">PAYMENT INFO</h2>
+                <div class="input-group">
+                    <label class="user-input-label" for="cc_key">Credit Card</label>
+                    <input type="text" class="user-input" id="cc_key" />
                 </div>
-                <div class="item-modifier">
-                    Almond Milk
-                </div>    
-            </div>
-            <div class="item-price">
-                $4.95
-            </div>
-        </div>
-        <div class="item">
-            <div class="item-qty">
-                1x
-            </div>
-            <div class="item-name-wrapper">
-                <div class="item-name">
-                    Latte
+                <div class="input-group">
+                    <label class="user-input-label" for="ccv_add">CCV</label>
+                    <input type="text" class="user-input short-input" id="ccv_add" />
                 </div>
-                <div class="item-modifier">
-                    Oat Milk
-                </div>
-                <div class="item-modifier">
-                    Double Shot Espresso
-                </div>    
             </div>
-            <div class="item-price">
-                $4.85
-            </div>
-        </div>
-        <div class="item">
-            <div class="item-qty">
-                1x
-            </div>
-            <div class="item-name-wrapper">
-                <div class="item-name">
-                    Cafe Americano
-                </div>
-                <div class="item-modifier">
-                    Double Shot Espresso
-                </div>    
-            </div>
-            <div class="item-price">
-                $3.25
-            </div>
-        </div>
-    </div>
-    <div class="right-column">
-
-        <div class="column-card name-block">
-            <h2>Name</h2>
-            <div class="name-input-group">
-                <label for="name-input" class="input-label"> Name for the order </label>
-                <input id="name-input" class="input-text" placeholder="try putting your name here dork" />
-            </div>
-              
-        </div>
-        <div class="column-card payment-block">
-            <h2>Payment</h2>
-            <div class="input-group">
-              <label class="user-input-label" for="cc"> Credit Card </label>
-              <input id="name-input" class="input-text" placeholder="0000 0000 0000 0000" />
-            </div>
-            <div class="input-group">
-              <label class="user-input-label" for="ccv"> CCV </label>
-              <input type="text" class="user-input short-input" id="ccv" />
-            </div>
-          </div>
         </section>
         <section class="total">
-          <table class="totals-table">
-            <tbody>
-              <tr>
-                <td> Subtotal: </td>
-                <td> $13.05 </td>
-              </tr>
-              <tr>
-                <td> Tax: </td>
-                <td> $1.28 </td>
-              </tr>
-              <tr class="final-totals">
-                <td> Total: </td>
-                <td> $14.33 </td>
-              </tr>
-            </tbody>
-          </table>
-          <button class="checkout" type="button"> Place order </button>
+            <table class="totals-table">
+                <tbody>
+                    <tr>
+                        <td>Subtotal:</td>
+                        <td id="subtot">$(null)</td>
+                    </tr>
+                    <tr>
+                        <td>Tax:</td>
+                        <td id="tax">$(null)</td>
+                    </tr>
+                    <tr class="final-totals">
+                        <td>Total:</td>
+                        <td id="totot">$(null)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="totalit()" class="totalbutton" type="button">CLICK HERE FOR TOTAL</button>
+            <button class="checkout" type="button">PLACE ORDER</button>
         </section>
-        </div>
     </div>
-</div>
+    </body>
 </body>
+<script>
+        let price1 = parseFloat((parseFloat(document.getElementById("pri1").innerHTML.slice(1, 100)) * parseFloat(document.getElementById("qant1").value)).toFixed(2).toString())
+        let price2 = parseFloat((parseFloat(document.getElementById("pri2").innerHTML.slice(1, 100)) * parseFloat(document.getElementById("qant2").value)).toFixed(2).toString())
+        let price3 = parseFloat((parseFloat(document.getElementById("pri3").innerHTML.slice(1, 100)) * parseFloat(document.getElementById("qant3").value)).toFixed(2).toString())
+        let subtot0 = price1 + price2 + price3
+        document.getElementById("subtot").innerHTML = "$" + subtot0.toFixed(2)
+        let tax = subtot0 * .07
+        let totot = subtot0 + tax
+        tax = tax.toFixed(2)
+        totot = totot.toFixed(2)
+        document.getElementById("tax").innerHTML = "$" + tax
+        document.getElementById("totot").innerHTML = "$" + totot
+    totalit();
+</script>
 </html>
