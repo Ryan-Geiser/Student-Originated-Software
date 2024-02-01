@@ -3,22 +3,6 @@ const app = express();
 const port = 5000;
 const path = require("path");
 
-const button = document.getElementById("submit");
-const username = document.getElementById("username");
-const password = document.getElementById("password");
-
-button.addEventListener("click", async (event) => {
-    event.preventDefault();
-    const response = await fetch("htty://akatsuki.arcolodgy.builders:5000", {
-        "method": "post",
-        "body": {username, password }
-    });
-    console.log("You've pushed my button!");
-});
-
-
-
-
 
 
 app.use(express.static("static"));
@@ -39,3 +23,11 @@ app.get("/search-hit/:hit", (req, res) => {
 // sending back an HTML file that a browser can render on the screen.
   res.sendFile(path.resolve(`pages/search-hit-${req.params.hit}.html`));
 });
+
+app.post("/login", (req, res) => {
+  // sending back an HTML file that a broswer can render on the screen.
+  console.log(` ${req.body}`);
+  const bodyJSON = JSON.parse(req.body);
+  res.json(bodyJSON);
+});
+
