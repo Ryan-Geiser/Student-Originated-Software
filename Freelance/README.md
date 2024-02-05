@@ -1,6 +1,7 @@
-Creating a sort of personal website for my final project
+Ideas for final project
+Creating a sort of personal website
 
-It's going to have:
+It would have:
 
     An about me/profile page. 
     Contact Page
