@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <img src="images/logo_rain.png" alt="" class="logo">
+        <ul id="menu-links">
+            <li>Home</li>
+            <li>Services</li>
+            <li>Projects</li>
+            <li>About Me</li>
+        </ul>
+        <button id="nav-btn">Get Started! <img src="images/arrow-white.png" alt=""></button>
+        <img src="images/menu.png" alt="" class="menu-icon">
+    </nav>
+    <div class="header">
+        <div class="header-content">
+           <h1><span> FREE </span><br><span> LANCER </span></h1>
+            <div class="btn-container">
+            <button class="btn-dark">Request Call Back <img src="images/phone.png" alt=""></button>
+            <button class="btn-light">Know More <img src="images/arrow-black.png" alt=""></button>
+            </div>
+        <p> Passionate Grad Who Needs To Feed His Cat. </p> 
+        </div>
+        <img src="images/user_me.png" alt="" class="user-img" onclick="toggleMenu()">
+    </div>
+
+<script>
+    let navbar = document.querySelector('nav');
+    let menuLinks = document.getElementById('menu-links');
+
+    function toggleMenu() {
+        menuLinks.classList.toggle('show-menu')
+    }
+
+    window.onscroll = function() {
+        if (window.scrollY > 0) {
+            navbar.style.background = '#eefff9';
+        }
+        else {
+            navbar.style.background = 'transparent';
+        }
+    }
+</script>
+</body>
+</html>
