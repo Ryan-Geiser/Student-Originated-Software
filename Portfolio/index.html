@@ -13,13 +13,15 @@
     <div class="container">
         <nav>
             <img src="images/logo copy.png" class="logo">
-            <ul>
+            <ul id="sidebar-menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
             <p>Post Grad Cat Dad</p>
@@ -44,31 +46,31 @@
                      non blandit leo ullamcorper non. Quisque vel ultrices urna, id hendrerit mi. Etiam vel sapien vulputate, porttitor diam a,
                     suscipit odio. Suspendisse a sollicitudin nisl. </p>
                     
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="open-tab('skills')">Skills</p>
-                        <p class="tab-links" onclick="open-tab('experience')">Experience</p>
-                        <p class="tab-links" onclick="open-tab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" class="skills">
-                        <ul>
-                            <li> <span>UI/UX</span><br>Designing Web/App interfaces</li>
-                            <li> <span>Web Development</span><br> Web/App interfaces</li>
-                            <li> <span>App Development</span><br>Building Android/iOS Apps</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li> <span>2021-Present</span><br>Went back to school due to Covid</li>
-                            <li> <span>2019-2020</span><br>Drafter and Engineer at Sunset Air</li>
-                            <li> <span>2019-2020</span><br>Bartending</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li> <span>2024</span><br>BAS Computer Science from The Evergreen State College</li>
-                            <li> <span>2020</span><br>AAS Engineering Technology from Augusta Technical College</li>
-                        </ul>
-                    </div>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="open-tab('skills')">Skills</p>
+                    <p class="tab-links" onclick="open-tab('experience')">Experience</p>
+                    <p class="tab-links" onclick="open-tab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" class="skills">
+                    <ul>
+                        <li> <span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li> <span>Web Development</span><br> Web/App interfaces</li>
+                        <li> <span>App Development</span><br>Building Android/iOS Apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li> <span>2021-Present</span><br>Went back to school due to Covid</li>
+                        <li> <span>2019-2020</span><br>Drafter and Engineer at Sunset Air</li>
+                        <li> <span>2019-2020</span><br>Bartending</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li> <span>2024</span><br>BAS Computer Science from The Evergreen State College</li>
+                        <li> <span>2020</span><br>AAS Engineering Technology from Augusta Technical College</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -150,6 +152,7 @@
                 <p> <i class="fas fa-paper-plane"></i>ryan.geiser@evergreen.edu</p>
                 <p> <i class="fas fa-phone-square-alt"></i>907.750.5554</p>
                 <div class="social-icons">
+                    <a href="https://www.github.com/Ryan-Geiser"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.instagram.com/rain.pnw/"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://discord.com/users/rain.pnw"><i class="fa-brands fa-discord"></i></a>
                     <a href="https://www.linkedin.com/in/ryan-geiser/"><i class="fa-brands fa-linkedin"></i></a>
@@ -159,12 +162,15 @@
             <div class="contact-right">
                 <form>
                     <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="eamil" id="Your Email" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="btn btn2">Submit</button>
                 </form>
             </div>
         </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Ryan. Made with <i class="fas fa-heart"></i> 2024</p>
     </div>
 </div>
 
