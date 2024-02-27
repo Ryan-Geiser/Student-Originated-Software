@@ -14,11 +14,11 @@
         <nav>
             <img src="images/logo copy.png" class="logo">
             <ul id="sidebar-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <i class="fas fa-times" onclick="closeMenu()"></i>
             </ul>
             <i class="fas fa-bars" onclick="openMenu()"></i>
@@ -110,19 +110,19 @@
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
             <div class="work">
-                <img src="images/work-1.png" alt="work-1">
+                <img src="images/Gorillas.png" alt="work-1">
                     <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>This App connects you to other talented developers around the world. Download it from the Play Store.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        <h3>Gorillas!</h3>
+                        <p>Play a web based version of the old classic bomb throwing game.</p>
+                        <a href="https://github.com/Ryan-Geiser/Projects/tree/main/Gorillas"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             <div class="work">
-                <img src="images/work-2.png" alt="work-2">
+                <img src="images/swole.png" alt="work-2">
                 <div class="layer">
-                    <h3>Music App</h3>
-                    <p>This App connects you to other talented developers around the world. Download it from the Play Store.</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    <h3>Swolenormous</h3>
+                    <p>A gym webpage built in Svelte kit and Tailwind CSS.</p>
+                    <a href="https://github.com/Ryan-Geiser/Projects/tree/main/gym-app-landingpage"><i class="fas fa-external-link-alt"></i></a>
                 </div>
                 </div>
             <div class="work">
@@ -158,12 +158,13 @@
                 <a href="images/Ryan_Geiser_Resume.pdf" download class="btn btn2">Download Resume</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
